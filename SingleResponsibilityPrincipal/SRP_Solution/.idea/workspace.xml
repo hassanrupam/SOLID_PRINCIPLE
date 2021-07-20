@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisUIOptions">
-    <option name="ANALYZE_TEST_SOURCES" value="false" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ab558ea-ace1-453b-9bf3-cb4d4babf22d" name="Default Changelist" comment="" />
+    <list default="true" id="6ba85501-c043-4c06-9812-159eeefaa717" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,11 +10,20 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
-  <component name="ProjectId" id="1vaWx0gVIulidi8BMdnCAy2i9Dv" />
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1vafrPT6mtZ3hu8rcWvpnfULRBT" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
@@ -86,38 +92,26 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/hassan/core" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="I:\___SOLID_PRINCIPAL\trunk\SingleResponsibilityPrincipal\SRP_Violation\src\com\hassan\core" />
+      <recent name="I:\___SOLID_PRINCIPAL\trunk\SingleResponsibilityPrincipal\SRP_Solution\src\com\hassan\core" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="I:\___SOLID_PRINCIPAL\trunk\SingleResponsibilityPrincipal\SRP_Violation\test\com.hassan.core" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.hassan.core" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.hassan.core" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.PaymentProcessorTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.hassan.core.Main" />
-      <module name="SRP_Violation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hassan.core.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <module name="SRP_Solution" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -133,8 +127,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SRP_Violation" />
+    <configuration name="OrderTest.getOrderNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SRP_Solution" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.hassan.core.*" />
@@ -143,80 +137,85 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.hassan.core" />
       <option name="MAIN_CLASS_NAME" value="com.hassan.core.OrderTest" />
+      <option name="METHOD_NAME" value="getOrderNumber" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderTest.getPaid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SRP_Solution" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hassan.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hassan.core" />
+      <option name="MAIN_CLASS_NAME" value="com.hassan.core.OrderTest" />
+      <option name="METHOD_NAME" value="getPaid" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderTest.setPaid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SRP_Solution" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hassan.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hassan.core" />
+      <option name="MAIN_CLASS_NAME" value="com.hassan.core.OrderTest" />
+      <option name="METHOD_NAME" value="setPaid" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentProcessorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SRP_Solution" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hassan.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hassan.core" />
+      <option name="MAIN_CLASS_NAME" value="com.hassan.core.PaymentProcessorTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderTest.isPaid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SRP_Violation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hassan.core.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.hassan.core" />
-      <option name="MAIN_CLASS_NAME" value="com.hassan.core.OrderTest" />
-      <option name="METHOD_NAME" value="isPaid" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderTest.processPayment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SRP_Violation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hassan.core.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.hassan.core" />
-      <option name="MAIN_CLASS_NAME" value="com.hassan.core.OrderTest" />
-      <option name="METHOD_NAME" value="processPayment" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderTest.totalPrice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SRP_Violation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hassan.core.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.hassan.core" />
-      <option name="MAIN_CLASS_NAME" value="com.hassan.core.OrderTest" />
-      <option name="METHOD_NAME" value="totalPrice" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.OrderTest.getOrderNumber" />
+      <item itemvalue="JUnit.OrderTest.getPaid" />
+      <item itemvalue="JUnit.OrderTest.setPaid" />
+      <item itemvalue="JUnit.PaymentProcessorTest" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PaymentProcessorTest" />
+        <item itemvalue="JUnit.OrderTest.setPaid" />
+        <item itemvalue="JUnit.OrderTest.getPaid" />
+        <item itemvalue="JUnit.OrderTest.getOrderNumber" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.OrderTest" />
-        <item itemvalue="JUnit.OrderTest.isPaid" />
-        <item itemvalue="JUnit.OrderTest.processPayment" />
-        <item itemvalue="JUnit.OrderTest.totalPrice" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3ab558ea-ace1-453b-9bf3-cb4d4babf22d" name="Default Changelist" comment="" />
-      <created>1626800926888</created>
+      <changelist id="6ba85501-c043-4c06-9812-159eeefaa717" name="Default Changelist" comment="" />
+      <created>1626805322454</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1626800926888</updated>
-      <workItem from="1626800929200" duration="1541000" />
-      <workItem from="1626802676179" duration="983000" />
-      <workItem from="1626804662385" duration="2979000" />
+      <updated>1626805322454</updated>
+      <workItem from="1626805325016" duration="2336000" />
     </task>
     <servers />
   </component>

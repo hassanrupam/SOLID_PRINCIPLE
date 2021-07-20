@@ -19,14 +19,19 @@ import java.util.List;
  * Created by Hassan Sakib Afrin on 20-07-2021
  */
 public class Order {
+    //region PRIVATE FIELDS
     final List<Item> itemList = new ArrayList<>();
-    private final String oderNumber;
+    private final String orderNumber;
     private Boolean isPaid = false;
+    //endregion
 
-    public Order(String _oderNumber) {
-        this.oderNumber = _oderNumber;
+    //region CONSTRUCTOR
+    public Order(String _orderNumber) {
+        this.orderNumber = _orderNumber;
     }
+    //endregion
 
+    //region PUBLIC METHODS
     public void add_Item(String _itemName, Double _quantity, Double _price) {
         this.itemList.add(new Item(_itemName, _quantity, _price));
     }
@@ -40,11 +45,11 @@ public class Order {
     public void processPayment(String _type, String _security_code) {
         if (_type.equals("CARD")) {
             System.out.println("Processing Card Payment");
-            System.out.println("Security Code for order : " + this.oderNumber + " is : " + _security_code);
+            System.out.println("Security Code for order : " + this.orderNumber + " is : " + _security_code);
             this.isPaid = true;
         } else if (_type.equals("ONLINE")) {
             System.out.println("Processing Online Payment");
-            System.out.println("Security Code for order : " + this.oderNumber + " is : " + _security_code);
+            System.out.println("Security Code for order : " + this.orderNumber + " is : " + _security_code);
             this.isPaid = true;
         } else {
             System.out.println("Unknown Payment Type");
@@ -58,4 +63,5 @@ public class Order {
             System.out.println("Payment is Pending");
         }
     }
+    //endregion
 }

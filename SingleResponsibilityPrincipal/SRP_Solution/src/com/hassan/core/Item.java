@@ -1,7 +1,7 @@
 package com.hassan.core;
 
 /**
- *
+ * This is a POJO class just to define the Items in the Order
  */
 class Item {
     //region PRIVATE FIELDS
