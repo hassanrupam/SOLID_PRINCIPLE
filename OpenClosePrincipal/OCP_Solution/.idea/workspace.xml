@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3fecca8b-d41d-4880-859a-3ba379e96e89" name="Default Changelist" comment="" />
+    <list default="true" id="e0e383f5-1037-48ad-8a7b-d63f195053f1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,11 +10,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
-  <component name="ProjectId" id="1vd9DvprFbbTxTDFFjhPdO1EndE" />
+  <component name="ProjectId" id="1vdCTIAbwdskc5LIbVGGBQbqsWs" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
@@ -75,34 +76,24 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/hassan/core" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Tests/com/hassan/core" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="I:\___SOLID_PRINCIPAL\trunk\OpenClosePrincipal\OCP_Violation\src\com\hassan\core" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.hassan.core" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.hassan.core" />
+      <recent name="I:\___SOLID_PRINCIPAL\trunk\OpenClosePrincipal\OCP_Solution\Tests\com\hassan\core" />
+      <recent name="I:\___SOLID_PRINCIPAL\trunk\OpenClosePrincipal\OCP_Solution\src\com\hassan\core" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.hassan.core.Main" />
-      <module name="OCP_Violation" />
+      <module name="OCP_Solution" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -121,23 +112,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="OCP_Violation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hassan.core.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.hassan.core" />
-      <option name="MAIN_CLASS_NAME" value="com.hassan.core.OrderTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PaymentProcessorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="OCP_Violation" />
+      <module name="OCP_Solution" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.hassan.core.*" />
@@ -151,28 +127,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PaymentProcessorTest.processPayment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OCP_Solution" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hassan.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hassan.core" />
+      <option name="MAIN_CLASS_NAME" value="com.hassan.core.PaymentProcessorTest" />
+      <option name="METHOD_NAME" value="processPayment" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.OrderTest" />
+      <item itemvalue="JUnit.PaymentProcessorTest.processPayment" />
       <item itemvalue="JUnit.PaymentProcessorTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.PaymentProcessorTest" />
-        <item itemvalue="JUnit.OrderTest" />
+        <item itemvalue="JUnit.PaymentProcessorTest.processPayment" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3fecca8b-d41d-4880-859a-3ba379e96e89" name="Default Changelist" comment="" />
-      <created>1626880986791</created>
+      <changelist id="e0e383f5-1037-48ad-8a7b-d63f195053f1" name="Default Changelist" comment="" />
+      <created>1626882599346</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1626880986791</updated>
-      <workItem from="1626880988823" duration="3449000" />
+      <updated>1626882599346</updated>
+      <workItem from="1626882600906" duration="3357000" />
     </task>
     <servers />
   </component>
