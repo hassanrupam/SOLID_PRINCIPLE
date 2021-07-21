@@ -1,83 +1,226 @@
-# Single Responsibility Principle
-* **Single responsibility principle** -  A class should have one, and only one, reason to change.
+# Open-Close Principal
+* **Single responsibility principle** -  Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.
 
-Here you will find two seperate projects to demonstrate the SIngle Responsibility Principal.
-  1. **[SRP_Violation](https://github.com/strangerOfDarkness/SOLID_PRINCIPAL/tree/main/SingleResponsibilityPrincipal/SRP_Violation)** 
-  2. **[SRP_Solution](https://github.com/strangerOfDarkness/SOLID_PRINCIPAL/tree/main/SingleResponsibilityPrincipal/SRP_Solution)**
+Here you will find two seperate projects to demonstrate the Open-Close Principal.
+  1. **[OCP_Violation](https://github.com/strangerOfDarkness/SOLID_PRINCIPAL/tree/main/OpenClosePrincipal/OCP_Violation)** 
+  2. **[OCP_Solution](https://github.com/strangerOfDarkness/SOLID_PRINCIPAL/tree/main/OpenClosePrincipal/OCP_Solution)**
   
-## **Project Name : [SRP_Violation](https://github.com/strangerOfDarkness/SOLID_PRINCIPAL/tree/main/SingleResponsibilityPrincipal/SRP_Violation)** ->
+## **Project Name : [OCP_Violation](https://github.com/strangerOfDarkness/SOLID_PRINCIPAL/tree/main/OpenClosePrincipal/OCP_Violation)** ->
 **Constains Classes->** 
 * **_Item_** 
 * **_Order_**
+* **_PaymentProcessor_**
 * **_Main_**
 
 
-The class **_Order_** contains a demo or Mock of Order and Payment System which is kept simple 
-just for the sake of simplicity to understand the Single Responsibility Principal
+The class **_PaymentProcessor_** show the violation of __Open-Close Principal__.
+From the previous Solution of Single Responsibility Principal, we had separated the Payment Processing Functionality to a new Class. 
+We can see that on the Project __"SRP_Solution"__. There we can see that our Payment processor could process __CARD__ and __ONLINE__ payments 
+in the _processPayment(..)_ Method. 
+```java
+public void processPayment(String _type, Order _order, String _security_code) {
+        if (_type.equals("CARD")) {
+            System.out.println("Processing Card Payment");
+            System.out.println("Security Code for order : " + _order.getOrderNumber() + " is : " + _security_code);
+            _order.setPaid(true);
+        } else if (_type.equals("ONLINE")) {
+            System.out.println("Processing Online Payment");
+            System.out.println("Security Code for order : " + _order.getOrderNumber() + " is : " + _security_code);
+            _order.setPaid(true);
+        } else {
+            System.out.println("Unknown Payment Type");
+        }
+    }
+```
+But now , a new Request for change came which specifies to add _CryptoCurrency_ and _Mobile Banking_ Payments in the
+Payments Processor.
 
-Here the class **_Order_** has the responsibility of -
-Funcaitonality | Method Signature
--------------- | ----------------
-adding items to the order            | void add_Item(String _itemName, Double _quantity, Double _price),
-Calculating Total price of the order | Double totalPrice()
-Process Payments                     | void processPayment(String _type, String _security_code)
-Checking if Payment is Done          | public void isPaid()
+So if we think generally, we would implement the new requirement that came in the same method. As we can see we had
+been keeping the _processPayment(..)_ Method very simple which takes the Type as argument and processes Accordingly
+with a nested if else section. That's What we did here, We added two nested if else section which can now process
+Crypto Currency and Mobile Banking Payments.
 
+According to our thinking, if we add the nested if else for both Crypto and Mobile Payment system then our method will
+look like this ->
+```java
+public void processPayment(String _type, Order _order, String _security_code) {
+        if (_type.equals("CARD")) {
+            System.out.println("Processing Card Payment");
+            System.out.println("Security Code for order : " + _order.getOrderNumber() + " is : " + _security_code);
+            _order.setPaid(true);
+        } else if (_type.equals("ONLINE")) {
+            System.out.println("Processing Online Payment");
+            System.out.println("Security Code for order : " + _order.getOrderNumber() + " is : " + _security_code);
+            _order.setPaid(true);
+        } else if (_type.equals("CRYPTO")) {
+            System.out.println("Processing Crypto Currency Payment");
+            System.out.println("Security Code for order : " + _order.getOrderNumber() + " is : " + _security_code);
+            _order.setPaid(true);
+        } else if (_type.equals("MOBILE")) {
+            System.out.println("Processing Mobile Banking Payment");
+            System.out.println("Security Code for order : " + _order.getOrderNumber() + " is : " + _security_code);
+            _order.setPaid(true);
+        } else {
+            System.out.println("Unknown Payment Type");
+        }
+    }
+```
+But this violates the __Open-Close Principal__. Beacuse in future if more payment process are added, we have  to keep modifying the 
+same _processPayment(..)_ over and over again. There are less scope of reusibility and also it will be hard to maintain beaucse 
+whenever a new processor is added we need to check if it had impacted any other functionality of the whole class in any way.
 
- The class **_Item_** is just a simple POJO to contain the item information in the Order. 
- 
- 
- The class **_Main_** is to just demonstrate the Birdseye outcome of the Program. 
- 
- Now as per the Single Responsibility Principal, One class should have one and only one reason to change,
- Meaning one class should consist of only related and a single responsibility.
- For making our code to satisfy the Single Responsibility Principal we can see the **SRP_Solution** project
+To satisfy the Open-Close Principal, we can see the solution **"OCP_Solution"**
 
-## **Project Name : [SRP_Solution](https://github.com/strangerOfDarkness/SOLID_PRINCIPAL/tree/main/SingleResponsibilityPrincipal/SRP_Solution)** ->
+## **Project Name : [OCP_Solution](https://github.com/strangerOfDarkness/SOLID_PRINCIPAL/tree/main/OpenClosePrincipal/OCP_Solution)** ->
+**Constains Interfcae->** 
+* **_IPaymentProcessor_** 
+
 **Constains Classes->** 
 * **_Item_**
 * **_Order_**
-* **_PaymentProcessor_** 
+* **_CardPaymentProcessor_** 
+* **_OnlinePaymentProcessor_** 
+* **_CryptoCurrencyPaymentProcessor_** 
+* **_MobileBankingPaymentProcessor_** 
 * **_Main_**
 
- As per the Single Responsibility Principal, It states that -> **A class should have one, and only one, reason to change.**
- Meaning A class should have only one responsibility to take care of, and those must be related with each other.
- Here We saw one class **_Order_** had responsibilities to add items and calculate total price for the order.
- The class also had the payment processing and checking if payment is done which should not be a responsibility of order itself
- So We should get rid of the functionalities from the **_Order_** Class
+The Purpose of **_IPaymentProcessor_**  is to show the solution of the violation of Open-Close Principal we saw in the
+__OCP_Violation__ project.
 
+To integrate the new requirements of _CryptoCurrency_ and _Mobile Banking_ Payments If we keep modifying Our previous
+__PaymentProcessor__ Class, then It will violate the Open-Close Principal.
 
- So now, the class **_Order_** has the responsibility of
- Funcaitonality | Method Signature
--------------- | ----------------
-adding items to the order            |  void add_Item(String _itemName, Double _quantity, Double _price),
-Calculating Total price of the order | Double totalPrice()
- 
-And the removed functionality for the payment processing are now served by a new Class named  **_PaymentProcessor_**
-The class PaymentProcessor has the responsibility of
- Funcaitonality | Method Signature
--------------- | ----------------
-Process Payments                    | void processPayment(String _type, String _security_code)
-and Checking if Payment is Done     | public void isPaid()
+__Open-Close Principal states__ that , Software entities (classes, modules, functions, etc.) should be open for
+__extension__, but closed for __modification__. Which means, while developing we should always think for the future
+extensibility. Classes , Modules or Functions, everything should be written in such a way so that it can be extended
+__without modifying__ the already tested ones. This ensures less cohesion on objects.
 
- 
- The class **_Item_** is just a simple POJO to contain the item information in the Order. 
+As per implementing the new requirements, by satisfy the __Open-Close Principal__, we restructured the whole Payment
+Process by creating an Interface **_IPaymentProcessor_** which holds the basic method signatures for payment processing.
+We created the 4 separate payment Processor Class implementing the interface so each now overrides the
+functionalities with their own definition. 
 
- The class **_Main_** is to just demonstrate the Birdseye outcome of the Program. 
+-> **_CardPaymentProcessor_**
+```java
+/**
+ * The Card Payment processor can hold it's own definition of processPayment(..) method. So it is easier to maintain
+ * and is closed for minimum modification if any future change occurs in any requirements. But as IPaymentProcessor
+ * is just the signature of how a Payment Process should be, so we are open to any new Payment Processor
+ * that might come in future
+ *
+ * Created by Hassan Sakib Afrin on 21-07-2021
+ */
+public class CardPaymentProcessor implements IPaymentProcessor{
+    @Override
+    public void processPayment(Order _order, String _security_code) {
+        System.out.println("Processing Card Payment");
+        System.out.println("Security Code for order : " + _order.getOrderNumber() + " is : " + _security_code);
+        _order.setPaid(true);
+    }
+
+    @Override
+    public void isPaid(Order _order) {
+        if (!_order.getPaid().equals(true)) System.out.println("Payment is Pending");
+        else System.out.println("Payment is Paid");
+    }
+}
+```
+-> **_OnlinePaymentProcessor_**
+```java
+/**
+ * The Online Payment processor can hold it's own definition of processPayment(..) method. So it is easier to maintain
+ * and is closed for minimum modification if any future change occurs in any requirements. But as IPaymentProcessor
+ * is just the signature of how a Payment Process should be, so we are open to any new Payment Processor
+ * that might come in future
+ *
+ * Created by Hassan Sakib Afrin on 21-07-2021
+ */
+public class OnlinePaymentProcessor implements IPaymentProcessor{
+    @Override
+    public void processPayment(Order _order, String _security_code) {
+        System.out.println("Processing Online Payment");
+        System.out.println("Security Code for order : " + _order.getOrderNumber() + " is : " + _security_code);
+        _order.setPaid(true);
+    }
+
+    @Override
+    public void isPaid(Order _order) {
+        if (!_order.getPaid().equals(true)) System.out.println("Payment is Pending");
+        else System.out.println("Payment is Paid");
+    }
+}
+```
+-> **_CryptoCurrencyPaymentProcessor_**
+```java
+/**
+ * The Crypto Currency Payment processor can hold it's own definition of processPayment(..) method. So it is easier to maintain
+ * and is closed for minimum modification if any future change occurs in any requirements. But as IPaymentProcessor
+ * is just the signature of how a Payment Process should be, so we are open to any new Payment Processor
+ * that might come in future
+ *
+ * Created by Hassan Sakib Afrin on 21-07-2021
+ */
+public class CryptoCurrencyPaymentProcessor implements IPaymentProcessor{
+    @Override
+    public void processPayment(Order _order, String _security_code) {
+        System.out.println("Processing Crypto Currency Payment");
+        System.out.println("Security Code for order : " + _order.getOrderNumber() + " is : " + _security_code);
+        _order.setPaid(true);
+    }
+
+    @Override
+    public void isPaid(Order _order) {
+        if (!_order.getPaid().equals(true)) System.out.println("Payment is Pending");
+        else System.out.println("Payment is Paid");
+    }
+}
+```
+-> **_MobileBankingPaymentProcessor_**
+```java
+/**
+ * The Mobile Banking processor can hold it's own definition of processPayment(..) method. So it is easier to maintain
+ * and is closed for minimum modification if any future change occurs in any requirements. But as IPaymentProcessor
+ * is just the signature of how a Payment Process should be, so we are open to any new Payment Processor
+ * that might come in future
+ *
+ * Created by Hassan Sakib Afrin on 21-07-2021
+ */
+public class MobileBankingPaymentProcessor implements IPaymentProcessor{
+    @Override
+    public void processPayment(Order _order, String _security_code) {
+        System.out.println("Processing Mobile Banking Payment");
+        System.out.println("Security Code for order : " + _order.getOrderNumber() + " is : " + _security_code);
+        _order.setPaid(true);
+    }
+
+    @Override
+    public void isPaid(Order _order) {
+        if (!_order.getPaid().equals(true)) System.out.println("Payment is Pending");
+        else System.out.println("Payment is Paid");
+    }
+}
+```
+So this closes each of those classes to modification , but we will be
+able to create new Payment processor in future by implementing the interface, so The Payment process
+system is now open to extensibility.
 
 ## **Conclusion**
-So hopefully we have a better understanding of the **Single Responsibility Principal** with the seimple example.
+So hopefully we have a better understanding of the **Open-Close Principal** with the simple example.
 
-But Why should we consider to follow this principal? The answer is we have some benefits. 
+Why should we consider to follow this principal?
 ### **The Benefits**
-* __The class is easier to understand__
-  * When the class only does “one thing”, its interface usually has a small number of methods that are fairly self explanatory. It should also have a small number of member    variables (less than seven-ish).
+* __Extensibility__
+-> "When a single change to a program results in a cascade of changes to dependent modules, that program exhibits the undesirable attributes that we have come to associate with 'bad' design. The program becomes fragile, rigid, unpredictable, and unreusable. The open-closed principle attacks this in a very straightforward way. It says that you should design modules that never change. When requirements change, you extend the behavior of such modules by adding new code, not by changing old code that already works."
+— **_Robert Martin_** 
 
-* __The class is easier to maintain__
-  * Changes are isolated, reducing the chance of breaking other unrelated areas of the software. As programming errors are inversely proportional to complexity, being easier to  understand makes the code less prone to bugs.
+* __Maintainability__
+-> The main benefit of this approach is that an interface introduces an additional level of abstraction which enables loose coupling. The implementations of an interface are independent of each other and don’t need to share any code. 
+Thus, you can easily cope-up with client's keep changing requirements. Very useful in agile methodologies.
 
-* __The class is more reusable__
-  * If a class has multiple responsibilities, and only one of those is needed in another area of the software, then the other unnecessary responsibilities hinder reusability. Having a single responsibility means the class should be reusable without modification. 
+* __Flexibility__
+-> The open-closed principle also applies to plugin and middleware architecture. In that case, your base software entity is your application core functionality.
+In the case of plugins, you have a base or core module that can be plugged with new features and functionality through a common gateway interface. A good example of this is web browser extensions. 
+
 
 
 <sub>Reach me out for any further querues on</sub>
