@@ -27,7 +27,7 @@ Checking if Payment is Done          | public void isPaid()
  The class **_Item_** is just a simple POJO to contain the item information in the Order. 
  
  
- The class **_Main_** is to just demonstrate the Birdseye outcome of the Program. 
+ The class **_Main_** is to just demonstrate the Birds eye outcome of the Program. 
  
  Now as per the Single Responsibility Principal, One class should have one and only one reason to change,
  Meaning one class should consist of only related and a single responsibility.
@@ -66,7 +66,7 @@ and Checking if Payment is Done     | public void isPaid()
  The class **_Main_** is to just demonstrate the Birdseye outcome of the Program. 
 
 ## **Conclusion**
-So hopefully we have a better understanding of the **Single Responsibility Principal** with the seimple example.
+So hopefully we have a better understanding of the **Single Responsibility Principal** with the simple example.
 
 But Why should we consider to follow this principal? The answer is we have some benefits. 
 ### **The Benefits**
