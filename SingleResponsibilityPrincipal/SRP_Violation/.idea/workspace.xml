@@ -122,17 +122,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="OrderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SRP_Violation" />
       <extension name="coverage">
@@ -216,7 +205,8 @@
       <updated>1626800926888</updated>
       <workItem from="1626800929200" duration="1541000" />
       <workItem from="1626802676179" duration="983000" />
-      <workItem from="1626804662385" duration="2979000" />
+      <workItem from="1626804662385" duration="3622000" />
+      <workItem from="1626854221262" duration="566000" />
     </task>
     <servers />
   </component>
