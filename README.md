@@ -12,7 +12,7 @@ The project can be navigated through the Folders with principal names above, or 
 
 * __[Single Responsibility Principle](https://github.com/strangerOfDarkness/SOLID_PRINCIPAL/tree/main/SingleResponsibilityPrincipal)__ -  A class should have one, and only one, reason to change.  
 
-* **Open/Closed principle - Software** entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.
+* **[Open/Closed principle](https://github.com/strangerOfDarkness/SOLID_PRINCIPAL/tree/main/OpenClosePrincipal)** - Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.
 
 * **Liskov Substitution Principle** - Child classes should never break the parent class type definitions.
 
