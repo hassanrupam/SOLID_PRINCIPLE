@@ -1,11 +1,11 @@
-# Open-Close Principal
-* **Single responsibility principle** -  Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.
+# Open-Close Principle
+* **Single Responsibility Principle** -  Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.
 
-Here you will find two seperate projects to demonstrate the Open-Close Principal.
-  1. **[OCP_Violation](https://github.com/strangerOfDarkness/SOLID_PRINCIPAL/tree/main/OpenClosePrincipal/OCP_Violation)** 
-  2. **[OCP_Solution](https://github.com/strangerOfDarkness/SOLID_PRINCIPAL/tree/main/OpenClosePrincipal/OCP_Solution)**
+Here you will find two seperate projects to demonstrate the Open-Close Principle.
+  1. **[OCP_Violation](https://github.com/strangerOfDarkness/SOLID_PRINCIPLE/tree/main/OpenClosePrincipal/OCP_Violation)** 
+  2. **[OCP_Solution](https://github.com/strangerOfDarkness/SOLID_PRINCIPLE/tree/main/OpenClosePrincipal/OCP_Solution)**
   
-## **Project Name : [OCP_Violation](https://github.com/strangerOfDarkness/SOLID_PRINCIPAL/tree/main/OpenClosePrincipal/OCP_Violation)** ->
+## **Project Name : [OCP_Violation](https://github.com/strangerOfDarkness/SOLID_PRINCIPLE/tree/main/OpenClosePrincipal/OCP_Violation)** ->
 **Constains Classes->** 
 * **_Item_** 
 * **_Order_**
@@ -13,8 +13,8 @@ Here you will find two seperate projects to demonstrate the Open-Close Principal
 * **_Main_**
 
 
-The class **_PaymentProcessor_** show the violation of __Open-Close Principal__.
-From the previous Solution of Single Responsibility Principal, we had separated the Payment Processing Functionality to a new Class. 
+The class **_PaymentProcessor_** show the violation of __Open-Close Principle__.
+From the previous Solution of Single Responsibility Principle, we had separated the Payment Processing Functionality to a new Class. 
 We can see that on the Project __"SRP_Solution"__. There we can see that our Payment processor could process __CARD__ and __ONLINE__ payments 
 in the _processPayment(..)_ Method. 
 ```java
@@ -65,13 +65,13 @@ public void processPayment(String _type, Order _order, String _security_code) {
         }
     }
 ```
-But this violates the __Open-Close Principal__. Beacuse in future if more payment process are added, we have  to keep modifying the 
+But this violates the __Open-Close Principle__. Beacuse in future if more payment process are added, we have  to keep modifying the 
 same _processPayment(..)_ over and over again. There are less scope of reusibility and also it will be hard to maintain beaucse 
 whenever a new processor is added we need to check if it had impacted any other functionality of the whole class in any way.
 
-To satisfy the Open-Close Principal, we can see the solution **"OCP_Solution"**
+To satisfy the Open-Close Principle, we can see the solution **"OCP_Solution"**
 
-## **Project Name : [OCP_Solution](https://github.com/strangerOfDarkness/SOLID_PRINCIPAL/tree/main/OpenClosePrincipal/OCP_Solution)** ->
+## **Project Name : [OCP_Solution](https://github.com/strangerOfDarkness/SOLID_PRINCIPLE/tree/main/OpenClosePrincipal/OCP_Solution)** ->
 **Constains Interfcae->** 
 * **_IPaymentProcessor_** 
 
@@ -84,18 +84,18 @@ To satisfy the Open-Close Principal, we can see the solution **"OCP_Solution"**
 * **_MobileBankingPaymentProcessor_** 
 * **_Main_**
 
-The Purpose of **_IPaymentProcessor_**  is to show the solution of the violation of Open-Close Principal we saw in the
+The Purpose of **_IPaymentProcessor_**  is to show the solution of the violation of Open-Close Principle we saw in the
 __OCP_Violation__ project.
 
 To integrate the new requirements of _CryptoCurrency_ and _Mobile Banking_ Payments If we keep modifying Our previous
-__PaymentProcessor__ Class, then It will violate the Open-Close Principal.
+__PaymentProcessor__ Class, then It will violate the Open-Close Principle.
 
-__Open-Close Principal states__ that , Software entities (classes, modules, functions, etc.) should be open for
+__Open-Close Principle states__ that , Software entities (classes, modules, functions, etc.) should be open for
 __extension__, but closed for __modification__. Which means, while developing we should always think for the future
 extensibility. Classes , Modules or Functions, everything should be written in such a way so that it can be extended
 __without modifying__ the already tested ones. This ensures less cohesion on objects.
 
-As per implementing the new requirements, by satisfy the __Open-Close Principal__, we restructured the whole Payment
+As per implementing the new requirements, by satisfy the __Open-Close Principle__, we restructured the whole Payment
 Process by creating an Interface **_IPaymentProcessor_** which holds the basic method signatures for payment processing.
 We created the 4 separate payment Processor Class implementing the interface so each now overrides the
 functionalities with their own definition. 
@@ -205,9 +205,9 @@ able to create new Payment processor in future by implementing the interface, so
 system is now open to extensibility.
 
 ## **Conclusion**
-So hopefully we have a better understanding of the **Open-Close Principal** with the simple example.
+So hopefully we have a better understanding of the **Open-Close Principle** with the simple example.
 
-Why should we consider to follow this principal?
+Why should we consider to follow this Principle?
 ### **The Benefits**
 * __Extensibility__
 -> "When a single change to a program results in a cascade of changes to dependent modules, that program exhibits the undesirable attributes that we have come to associate with 'bad' design. The program becomes fragile, rigid, unpredictable, and unreusable. The open-closed principle attacks this in a very straightforward way. It says that you should design modules that never change. When requirements change, you extend the behavior of such modules by adding new code, not by changing old code that already works."
