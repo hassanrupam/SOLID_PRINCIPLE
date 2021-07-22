@@ -2,10 +2,10 @@
 * **Single Responsibility Principle** -  Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.
 
 Here you will find two seperate projects to demonstrate the Open-Close Principle.
-  1. **[OCP_Violation](https://github.com/strangerOfDarkness/SOLID_PRINCIPLE/tree/main/OpenClosePrincipal/OCP_Violation)** 
-  2. **[OCP_Solution](https://github.com/strangerOfDarkness/SOLID_PRINCIPLE/tree/main/OpenClosePrincipal/OCP_Solution)**
+  1. **[OCP_Violation](https://github.com/strangerOfDarkness/SOLID_PRINCIPLE/tree/main/OpenClosePrinciple/OCP_Violation)** 
+  2. **[OCP_Solution](https://github.com/strangerOfDarkness/SOLID_PRINCIPLE/tree/main/OpenClosePrinciple/OCP_Solution)**
   
-## **Project Name : [OCP_Violation](https://github.com/strangerOfDarkness/SOLID_PRINCIPLE/tree/main/OpenClosePrincipal/OCP_Violation)** ->
+## **Project Name : [OCP_Violation](https://github.com/strangerOfDarkness/SOLID_PRINCIPLE/tree/main/OpenClosePrinciple/OCP_Violation)** ->
 **Constains Classes->** 
 * **_Item_** 
 * **_Order_**
@@ -71,7 +71,7 @@ whenever a new processor is added we need to check if it had impacted any other 
 
 To satisfy the Open-Close Principle, we can see the solution **"OCP_Solution"**
 
-## **Project Name : [OCP_Solution](https://github.com/strangerOfDarkness/SOLID_PRINCIPLE/tree/main/OpenClosePrincipal/OCP_Solution)** ->
+## **Project Name : [OCP_Solution](https://github.com/strangerOfDarkness/SOLID_PRINCIPLE/tree/main/OpenClosePrinciple/OCP_Solution)** ->
 **Constains Interfcae->** 
 * **_IPaymentProcessor_** 
 
