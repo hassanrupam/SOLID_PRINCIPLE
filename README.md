@@ -1,7 +1,7 @@
-# SOLID PRINCIPAL
-The purpose of this repository is solely for better understanding of **Solid Principal** for the beginners and to understand why we use **SOLID Principal** while developing software.
+# SOLID PRINCIPLE
+The purpose of this repository is solely for better understanding of **Solid Principle** for the beginners and to understand why we use **SOLID Principle** while developing software.
 
-Here all the 5 Principals are demonstrated with a very simple and basic example in java console programs.
+Here all the 5 Principles are demonstrated with a very simple and basic example in java console programs.
 Each Project has it's own explanation inside code comments as well as in the **_README.MD_** files.
 
 Each Principal has been demonstrated with Two Projects
