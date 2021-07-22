@@ -4,15 +4,15 @@ The purpose of this repository is solely for better understanding of **Solid Pri
 Here all the 5 Principles are demonstrated with a very simple and basic example in java console programs.
 Each Project has it's own explanation inside code comments as well as in the **_README.MD_** files.
 
-Each Principal has been demonstrated with Two Projects
+Each Principle has been demonstrated with Two Projects
 1. **The Violation**
 2. **The Solution** 
 
 The project can be navigated through the Folders with principal names above, or you can click on the Links Below ->
 
-* __[Single Responsibility Principle](https://github.com/strangerOfDarkness/SOLID_PRINCIPAL/tree/main/SingleResponsibilityPrincipal)__ -  A class should have one, and only one, reason to change.  
+* __[Single Responsibility Principle](https://github.com/strangerOfDarkness/SOLID_PRINCIPLE/tree/main/SingleResponsibilityPrincipal)__ -  A class should have one, and only one, reason to change.  
 
-* **[Open/Closed principle](https://github.com/strangerOfDarkness/SOLID_PRINCIPAL/tree/main/OpenClosePrincipal)** - Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.
+* **[Open/Closed principle](https://github.com/strangerOfDarkness/SOLID_PRINCIPLE/tree/main/OpenClosePrincipal)** - Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.
 
 * **Liskov Substitution Principle** - Child classes should never break the parent class type definitions.
 
