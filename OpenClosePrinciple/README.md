@@ -1,5 +1,5 @@
 # Open-Close Principle
-* **Single Responsibility Principle** -  Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.
+* **Open-Close Principle** -  Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.
 
 Here you will find two seperate projects to demonstrate the Open-Close Principle.
   1. **[OCP_Violation](https://github.com/strangerOfDarkness/SOLID_PRINCIPLE/tree/main/OpenClosePrinciple/OCP_Violation)** 
