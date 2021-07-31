@@ -16,7 +16,7 @@ The project can be navigated through the Folders with principal names above, or 
 
 * **[Liskov Substitution Principle](https://github.com/strangerOfDarkness/SOLID_PRINCIPLE/tree/main/LiskovSubstitutionPrinciple)** - Child classes should never break the parent class type definitions.
 
-* **Interface Segregation Principle** - No client should be forced to depend on methods it does not use.
+* **[Interface Segregation Principle](https://github.com/strangerOfDarkness/SOLID_PRINCIPLE/tree/main/InterfaceSegregationPrinciple)** - No client should be forced to depend on methods it does not use.
 
 * **Dependency inversion principle** - High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend upon details. Details should depend upon abstractions.
 
