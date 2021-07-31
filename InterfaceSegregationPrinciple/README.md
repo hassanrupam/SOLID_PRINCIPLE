@@ -31,7 +31,6 @@ So the **_IPaymentProcessor_** now looks like this ->
 		public void isPaid(Order _order);
 		public void verifyTwoFactorAuth() throws Exception;
 	}
-}
 ```
 Now as the parent has defined the _verifyTwoFactorAuth()_ we must now implement the definition in all the 4 child classes.
 But here we assume we don't have any two factor authentication support for **CardPaymentProcessor** and  **CryptoCurrencyPaymentProcessor**.
@@ -42,7 +41,6 @@ looks something like this->
     public void verifyTwoFactorAuth() throws Exception {
         throw new Exception("Card Payment doesn't support two factor authentication!");
     }
-}
 ```
 
 We assume we have Two Factor Authentication support for **MobileBankingPaymentProcessor** and **OnlinePaymentProcessor** so we implemented the method
@@ -56,7 +54,6 @@ show the concept of **Interface Segregation Principle**.
         TimeUnit.SECONDS.sleep(1);
         System.out.println("Verification Complete");
     }
-}
 ```
 
 But here we see that we are forcing the **CardPaymentProcessor** and  **CryptoCurrencyPaymentProcessor** classes to define a method that they doesn't need.
@@ -127,11 +124,11 @@ So hopefully we have a better understanding of the **Interface Segregation Princ
 
 Enforcing ISP gives you following bonuses:
 ### **The Benefits**
-* __High cohesion __
+* **High cohesion**
 -> Better understandability, robustness
 
 
-* __Low coupling __
+* **Low coupling**
 -> better maintainability, high resistance to changes
 
 
