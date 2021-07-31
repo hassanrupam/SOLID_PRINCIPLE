@@ -1,7 +1,7 @@
 # Liskov-Substitution Principle
 * **Liskov-Substitution Principle** -  Child classes should never break the parent class type definitions.
 
-Here you will find two seperate projects to demonstrate the Open-Close Principle.
+Here you will find two seperate projects to demonstrate the Liskov-Substitution Principle.
   1. **[LSP_Violation](https://github.com/strangerOfDarkness/SOLID_PRINCIPLE/tree/main/LiskovSubstitutionPrinciple/LSP_Violation)** 
   2. **[LSP_Solution](https://github.com/strangerOfDarkness/SOLID_PRINCIPLE/tree/main/LiskovSubstitutionPrinciple/LSP_Solution)**
   
@@ -19,8 +19,8 @@ Here you will find two seperate projects to demonstrate the Open-Close Principle
 * **_Main_**
 
 
-A brief reminder what we did so far with the example is-> As per implementing the new requirements, by satisfy the Open-Close Principal, 
-we restructured the whole Payment Process by creating an Interface IPaymentProcessor which holds the basic method signatures for payment processing.
+A brief reminder what we did so far with the example is-> As per implementing the new requirements, by satisfy the **Open-Close Principal**, 
+we restructured the whole Payment Process by creating an Interface **_IPaymentProcessor_** which holds the basic method signatures for payment processing.
 We created the 4 separate payment Processor Class implementing the interface so each now overrides the
 functionalities with their own definition. So this closes each of those classes to modification , but we will be
 able to create new Payment processor in future by implementing the interface, so The Payment process
