@@ -14,7 +14,7 @@ The project can be navigated through the Folders with principal names above, or 
 
 * **[Open/Closed principle](https://github.com/strangerOfDarkness/SOLID_PRINCIPLE/tree/main/OpenClosePrinciple)** - Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.
 
-* **Liskov Substitution Principle** - Child classes should never break the parent class type definitions.
+* **[Liskov Substitution Principle](https://github.com/strangerOfDarkness/SOLID_PRINCIPLE/tree/main/LiskovSubstitutionPrinciple)** - Child classes should never break the parent class type definitions.
 
 * **Interface Segregation Principle** - No client should be forced to depend on methods it does not use.
 
