@@ -1,7 +1,7 @@
 # Interface Segregation Principle
 * **Interface Segregation Principle** - No client should be forced to depend on methods it does not use.
 
-Here you will find two seperate projects to demonstrate the Open-Close Principle.
+Here you will find two seperate projects to demonstrate the Interface Segregation Principle.
   1. **[ISP_Violation](https://github.com/strangerOfDarkness/SOLID_PRINCIPLE/tree/main/InterfaceSegregationPrinciple/ISP_Violation)** 
   2. **[ISP_Solution](https://github.com/strangerOfDarkness/SOLID_PRINCIPLE/tree/main/InterfaceSegregationPrinciple/ISP_Solution)**
   
