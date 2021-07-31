@@ -48,7 +48,7 @@ _verifyTwoFactorAuth()_ here properly. In general we would have written all sort
 and sub routines here but for sake of simplicity we kept it simple just by some hard coded text to just
 show the concept of **Interface Segregation Principle**.
 ```java
-	@Override
+    @Override
     public void verifyTwoFactorAuth() throws Exception {
         System.out.println("Verifying Two Factor Authentication");
         TimeUnit.SECONDS.sleep(1);
